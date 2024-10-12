@@ -1,0 +1,10 @@
+.welcome{
+    background-color: lightgray;
+    height: 30px;
+    padding: 1rem;
+}
+.message{
+    background-color: white;
+    height: 30px;
+    padding: 1rem;
+}

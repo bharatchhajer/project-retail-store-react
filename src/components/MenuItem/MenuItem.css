@@ -1,0 +1,7 @@
+.menuitem{
+    border: 2px lightcoral solid;
+    background-color: lightcoral;
+    width: 150px;
+    border-radius: 5px;
+    margin: 1rem;
+}

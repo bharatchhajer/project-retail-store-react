@@ -1,0 +1,5 @@
+.menucontainer {
+    display: flex; /* Makes the container a flexbox */
+    justify-content: center; /* Aligns items horizontally in the center */
+    gap: 10px; /* Optional: Adds space between items */
+  }
