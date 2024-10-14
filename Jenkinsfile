@@ -35,7 +35,10 @@ pipeline {
                                 echo 'Starting React frontend...'
                                 // bat 'start /B npm start > app-front.log 2>&1'
                                 // bat 'npm start'
-                                powershell 'npm start | Tee-Object -FilePath app-front.log'
+                               // powershell 'npm start | Tee-Object -FilePath app-front.log'
+                               powershell '''
+Start-Process -FilePath "npm" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-front.log" -RedirectStandardError "app-front.log"
+'''
                          //   }
                         }
                     }
