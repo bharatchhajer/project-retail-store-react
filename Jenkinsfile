@@ -36,9 +36,14 @@ pipeline {
                                 // bat 'start /B npm start > app-front.log 2>&1'
                                 // bat 'npm start'
                                // powershell 'npm start | Tee-Object -FilePath app-front.log'
-                               powershell ''' 
-                                Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
-                                '''
+                               //powershell ''' 
+                                //Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
+                                //'''
+                                powershell ''' 
+                                Start-Job -ScriptBlock { 
+                                Start-Process -FilePath "C:\\Program Files\\nodejs\\npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
+                                } 
+                                ''' 
                          //   }
                         }
                     }
