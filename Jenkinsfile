@@ -39,10 +39,13 @@ pipeline {
                                //powershell ''' 
                                 //Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
                                 //'''
+                                //powershell ''' 
+                                //Start-Job -ScriptBlock { 
+                                //Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
+                                //} 
+                                ''' 
                                 powershell ''' 
-                                Start-Job -ScriptBlock { 
-                                Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
-                                } 
+                                start /B npm.cmd start 1> app-react.log 2> app-react-error.log 
                                 ''' 
                          //   }
                         }
