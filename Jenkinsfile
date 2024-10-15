@@ -43,7 +43,7 @@ pipeline {
                                 //Start-Job -ScriptBlock { 
                                 //Start-Process -FilePath "npm.cmd" -ArgumentList "start" -NoNewWindow -RedirectStandardOutput "app-react.log" -RedirectStandardError "app-react-error.log" 
                                 //} 
-                                ''' 
+                                //''' 
                                 powershell ''' 
                                 start /B npm start 1> app-react.log 2> app-react-error.log 
                                 ''' 
