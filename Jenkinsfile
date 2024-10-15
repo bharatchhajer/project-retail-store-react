@@ -45,7 +45,7 @@ pipeline {
                                 //} 
                                 //''' 
                                 powershell ''' 
-                                start /B npm start 1> app-react.log 2> app-react-error.log 
+                                start /B npx react-scripts start 1> app-react.log 2> app-react-error.log 
                                 ''' 
                          //   }
                         }
